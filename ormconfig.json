@@ -1,0 +1,19 @@
+{
+  "username": "docker",
+  "password": "ignite",
+
+  "name": "default",
+  "type": "postgres",
+  "host": "database_finapi",
+  "port": 5432,
+  "database": "finapi",
+  "entities": [
+    "./src/modules/**/entities/*.ts"
+  ],
+  "migrations": [
+    "./src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
+}

@@ -1,0 +1,20 @@
+# Versão
+version: "3.2"
+
+services:
+  database:
+    image: postgres
+    container_name: database_finapi
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=ignite
+      - POSTGRES_DB=finapi
+    volumes:
+      - pgdata:/data/postgres
+
+volumes:
+  pgdata:
+    driver: local
